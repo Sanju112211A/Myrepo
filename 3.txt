@@ -1,1 +1,265 @@
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (master)
+$ ls
+1.txt  2.txt
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (master)
+$ touch 3.txt
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (master)
+$ echo "gunjan" >> 3.txt
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (master)
+$ ls
+1.txt  2.txt  3.txt
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (master)
+$ ga .
+bash: ga: command not found
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (master)
+$ git commit -m "Third file"
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (master)
+$ git add 3.txt
+warning: in the working copy of '3.txt', LF will be replaced by CRLF the next time Git touches it
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   3.txt
+
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (master)
+$ git commit -m "Third file"
+[master 6fefd76] Third file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 3.txt
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (master)
+$ git log
+commit 6fefd7684b19c71393df8a6cd6f3f526d0458ccb (HEAD -> master)
+Author: Sanju112211A <>
+Date:   Wed Sep 20 11:45:54 2023 +0530
+
+    Third file
+
+commit f20e9591e4e5091501361bef0083cf2b4b382c0e
+Author: Sanju112211A <>
+Date:   Wed Sep 20 10:47:21 2023 +0530
+
+    Welcome!!!..this is second Commit.
+
+commit 7ab23bb897db0f5d682bf59c06234b119974b328
+Author: Sanju112211A <rukshandhananjaya11@gmail.com>
+Date:   Wed Sep 20 10:18:10 2023 +0530
+
+    Hi there
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (master)
+$ rm 3.txt
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (master)
+$ git add .
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (master)
+$ git commit -m "Deleted file"
+[master 221424f] Deleted file
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 3.txt
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (master)
+$ git log
+commit 221424f80e0450ba53218fba23990741b32ff3fe (HEAD -> master)
+Author: Sanju112211A <>
+Date:   Wed Sep 20 11:46:16 2023 +0530
+
+    Deleted file
+
+commit 6fefd7684b19c71393df8a6cd6f3f526d0458ccb
+Author: Sanju112211A <>
+Date:   Wed Sep 20 11:45:54 2023 +0530
+
+    Third file
+
+commit f20e9591e4e5091501361bef0083cf2b4b382c0e
+Author: Sanju112211A <>
+Date:   Wed Sep 20 10:47:21 2023 +0530
+
+    Welcome!!!..this is second Commit.
+
+commit 7ab23bb897db0f5d682bf59c06234b119974b328
+Author: Sanju112211A <rukshandhananjaya11@gmail.com>
+Date:   Wed Sep 20 10:18:10 2023 +0530
+
+    Hi there
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (master)
+$ ls
+1.txt  2.txt
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (master)
+$ git reset --hard 6fefd7684b19c71393df8a6cd6f3f526d0458ccb
+HEAD is now at 6fefd76 Third file
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (master)
+$ ls
+1.txt  2.txt  3.txt
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (master)
+$
 gunjan
+
+*********************************************************************
+
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (master)
+$ git log
+commit 6fefd7684b19c71393df8a6cd6f3f526d0458ccb (HEAD -> master)
+Author: Sanju112211A <>
+Date:   Wed Sep 20 11:45:54 2023 +0530
+
+    Third file
+
+commit f20e9591e4e5091501361bef0083cf2b4b382c0e
+Author: Sanju112211A <>
+Date:   Wed Sep 20 10:47:21 2023 +0530
+
+    Welcome!!!..this is second Commit.
+
+commit 7ab23bb897db0f5d682bf59c06234b119974b328
+Author: Sanju112211A <rukshandhananjaya11@gmail.com>
+Date:   Wed Sep 20 10:18:10 2023 +0530
+
+    Hi there
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (master)
+$ git checkout -b newbranch
+Switched to a new branch 'newbranch'
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (newbranch)
+$ ^C
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (newbranch)
+$ touch c.txt
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (newbranch)
+$ echo "new branch"
+new branch
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (newbranch)
+$ ^C
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (newbranch)
+$ eco "new branch" >>C.txt
+bash: eco: command not found
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (newbranch)
+$ git add c.txt
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (newbranch)
+$ touch d.txt
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (newbranch)
+$ eco "new branch" >> c.txt
+bash: eco: command not found
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (newbranch)
+$ echo "new branch" >> c.txt
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (newbranch)
+$ cat c.txt
+new branch
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (newbranch)
+$ cat c.txt
+new branch
+test
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (newbranch)
+$ git log
+commit 6fefd7684b19c71393df8a6cd6f3f526d0458ccb (HEAD -> newbranch, master)
+Author: Sanju112211A <>
+Date:   Wed Sep 20 11:45:54 2023 +0530
+
+    Third file
+
+commit f20e9591e4e5091501361bef0083cf2b4b382c0e
+Author: Sanju112211A <>
+Date:   Wed Sep 20 10:47:21 2023 +0530
+
+    Welcome!!!..this is second Commit.
+
+commit 7ab23bb897db0f5d682bf59c06234b119974b328
+Author: Sanju112211A <rukshandhananjaya11@gmail.com>
+Date:   Wed Sep 20 10:18:10 2023 +0530
+
+    Hi there
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (newbranch)
+$ git add c.txt
+warning: in the working copy of 'c.txt', LF will be replaced by CRLF the next time Git touches it
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (newbranch)
+$ git commit -m "new commit on braanch"
+[newbranch d58d16e] new commit on braanch
+ 1 file changed, 2 insertions(+)
+ create mode 100644 c.txt
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (newbranch)
+$ git log
+commit d58d16e2e82c942d599daabb013dfbb71d9e4648 (HEAD -> newbranch)
+Author: Sanju112211A <>
+Date:   Fri Sep 22 10:16:42 2023 +0530
+
+    new commit on braanch
+
+commit 6fefd7684b19c71393df8a6cd6f3f526d0458ccb (master)
+Author: Sanju112211A <>
+Date:   Wed Sep 20 11:45:54 2023 +0530
+
+    Third file
+
+commit f20e9591e4e5091501361bef0083cf2b4b382c0e
+Author: Sanju112211A <>
+Date:   Wed Sep 20 10:47:21 2023 +0530
+
+    Welcome!!!..this is second Commit.
+
+commit 7ab23bb897db0f5d682bf59c06234b119974b328
+Author: Sanju112211A <rukshandhananjaya11@gmail.com>
+Date:   Wed Sep 20 10:18:10 2023 +0530
+
+    Hi there
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (newbranch)
+$ ^C
+
+Dhana@LAPTOP-D67N28MC MINGW64 ~/Desktop/New folder (2) (newbranch)
+$
